@@ -4,7 +4,7 @@
 export default [
   {
     number:11,
-    name:'K K', ////////////////////////////////
+    name:'Kinky Kookaburra',
     url:'https://github.com/archifiltre/v11/releases/download/',
   },
   {

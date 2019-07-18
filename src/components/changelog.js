@@ -75,15 +75,31 @@ const log_cell_data = [
   {
     number:11,
     date: pick({
-      fr: '14 Novembre 2018', ///////////////////////////////
-      en: 'November 14 2018', ///////////////////////////////
+      fr: '18 Juillet 2019',
+      en: 'July 18 2019',
     }),
     content: pick({
       fr:
-        <span></span> ///////////////////////////////
+        <span>
+          Après une période de transition, Archifiltre reprend ses évolutions !<br /><br />
+          Vous pouvez désormais <b>accéder directement aux dossiers et fichiers depuis Archifiltre</b> ! Un 
+          élément sélectionné parmi l'arborescence, cliquez sur la loupe sur son icône, et le logiciel 
+          adapté l'ouvrira dans une nouvelle fenêtre.<br /><br />
+          Lorsque vous déposez une arborescence, des <b>barres de progression</b> vous indiqueront plus clairement 
+          où en est l'analyse.<br /><br />
+          L'<b>export en CSV</b> a été revu pour plus de lisibilité dans les colonnes et un encodage qui soit mieux 
+          pris en charge par Excel.          
+        </span>
       ,
       en:
-        <span></span> ///////////////////////////////
+        <span>
+          After a short hiatus, Archifiltre is back at its job!<br /><br />
+          You can now <b>access files and folders directly from Archifiltre</b>! With an element selected 
+          within the file tree, click the magnifying glass over its icon, and the right application will 
+          open it in a new window.<br /><br />
+          When you drop a file tree, <b>progress bars</b> will indicate more clearly how the analysis is goign.<br /><br />
+          The <b>CSV export</b> has been revamped for more readable columns and an encoding more suited for Excel.
+        </span>
       ,
     }),
   },
@@ -95,10 +111,20 @@ const log_cell_data = [
     }),
     content: pick({
       fr:
-        <span></span> ///////////////////////////////
+        <span>
+          Grande nouveauté pour les archivistes : Archifiltre permet désormais <b>l'export de paquets SEDA</b> !<br /><br />
+          D'un simple clic, vous éditez un fichier zip contenant l'intégralité des fichiers analysés, ainsi qu'un
+          manifeste conforme à la norme SEDA 2.1, reprenant toutes leurs métadonnées. Y compris, bien sûr, les alias, 
+          tags et commentaires que vous avez renseignés dans Archifiltre. Votre SIP est prêt à verser !
+        </span>
       ,
       en:
-        <span></span> ///////////////////////////////
+        <span>
+          Great news for archivists: Archifiltre now <b>exports SEDA-compliant packages</b>!<br /><br />
+          In one click, you can produce a zip file which contains all the files you've just processed, and a 
+          SEDA 2.1-compliant manifesto, with all their metadata. That includes the aliases, tags and comments you've 
+          added in Archifiltre, of course. And your SIP is ready to upload!
+        </span>
       ,
     }),
   },

@@ -14,7 +14,7 @@ devServer: dev
 	sudo docker run \
 		--rm \
 		-p 8000:8000 \
-		--mount type=bind,source=$(pwd),target=/mnt,readonly \
+		--mount type=bind,source="$(pwd)",target=/mnt,readonly \
 		-it \
 		$(image_name):dev
 
