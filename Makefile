@@ -5,27 +5,27 @@ all: devServer
 
 runProd : prod
 	sudo docker run \
-		--network=host \
+		--rm \
+		-p 8000:8000 \
 		-it \
 		$(image_name):prod
 
 devServer: dev
 	sudo docker run \
-		--network=host \
+		--rm \
+		-p 8000:8000 \
 		--mount type=bind,source=$(pwd),target=/mnt,readonly \
 		-it \
 		$(image_name):dev
 
 dev: cleanContainer
 	sudo docker build \
-		--network=host \
 		--target=dev \
 		--tag=$(image_name):dev \
 		.
 
 prod: cleanContainer
 	sudo docker build \
-		--network=host \
 		--tag=$(image_name):prod \
 		.
 
@@ -49,6 +49,7 @@ cloneAndCleanDist:
 
 bundle: prod cloneAndCleanDist
 	sudo docker run \
+		--rm \
 		-d \
 		--name=$(image_name) \
 		$(image_name):prod sh

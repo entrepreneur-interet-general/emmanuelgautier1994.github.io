@@ -1,8 +1,8 @@
-FROM node:9.7.1 as dev
+FROM node:8.16.0 as dev
 
 RUN apt-get update && apt-get -y install \
-  inotify-tools=3.14-1+b1 \
-  rsync=3.1.1-3+deb8u1
+  inotify-tools \
+  rsync
 
 WORKDIR /usr/src/app
 
