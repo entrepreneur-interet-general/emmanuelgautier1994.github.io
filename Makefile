@@ -35,27 +35,27 @@ cleanContainer:
 	sudo docker container prune -f
 
 
-dist='./archifiltre.github.io'
+# dist='./archifiltre.github.io'
 
-cloneAndCleanDist:
-	sudo rm -fr $(dist)
-	git clone git@github.com:archifiltre/archifiltre.github.io.git $(dist)
-	cd $(dist) && find . -maxdepth 1 \
-		-not -path '\.' \
-		-not -path '\./\.*' \
-		-not -path '\./README.md' \
-		-not -path '\./LICENSE' \
-		| xargs -I {} rm -fr {}
+# cloneAndCleanDist:
+# 	sudo rm -fr $(dist)
+# 	git clone git@github.com:archifiltre/archifiltre.github.io.git $(dist)
+# 	cd $(dist) && find . -maxdepth 1 \
+# 		-not -path '\.' \
+# 		-not -path '\./\.*' \
+# 		-not -path '\./README.md' \
+# 		-not -path '\./LICENSE' \
+# 		| xargs -I {} rm -fr {}
 
-bundle: prod cloneAndCleanDist
-	sudo docker run \
-		--rm \
-		-d \
-		--name=$(image_name) \
-		$(image_name):prod sh
-	sudo docker cp $(image_name):/usr/src/app/dist/. $(dist)
-	sudo docker container rm $(image_name)
-	sudo chmod -R 777 $(dist)
+# bundle: prod cloneAndCleanDist
+# 	sudo docker run \
+# 		--rm \
+# 		-dit \
+# 		--name=$(image_name) \
+# 		$(image_name):prod sh
+# 	sudo docker cp $(image_name):/usr/src/app/dist/. $(dist)
+# 	sudo docker container stop -t 1 $(image_name)
+# 	sudo chmod -R 777 $(dist)
 
-install: bundle
-	cd $(dist) && git add . && git commit -m 'commit' && git push
+# install: bundle
+# 	cd $(dist) && git add . && git commit -m 'commit' && git push
