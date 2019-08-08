@@ -3,6 +3,11 @@
 
 export default [
   {
+    number:12,
+    name:'Lucky Lama',
+    url:'https://github.com/archifiltre/v12/releases/download/',
+  },
+  {
     number:11,
     name:'Kinky Kookaburra',
     url:'https://github.com/archifiltre/v11/releases/download/',

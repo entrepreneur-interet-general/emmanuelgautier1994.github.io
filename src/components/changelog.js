@@ -73,6 +73,25 @@ const settings = {
 
 const log_cell_data = [
   {
+    number:12,
+    date: pick({
+      fr: 'TO DO',
+      en: 'TO DO',
+    }),
+    content: pick({
+      fr:
+        <span>
+          TO DO       
+        </span>
+      ,
+      en:
+        <span>
+          TO DO
+        </span>
+      ,
+    }),
+  },
+  {
     number:11,
     date: pick({
       fr: '18 Juillet 2019',
