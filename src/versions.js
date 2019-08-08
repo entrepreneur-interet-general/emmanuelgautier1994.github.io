@@ -4,7 +4,7 @@
 export default [
   {
     number:12,
-    name:'Lucky Lama',
+    name:'Lucky Llama',
     url:'https://github.com/archifiltre/v12/releases/download/',
   },
   {

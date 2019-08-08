@@ -75,18 +75,32 @@ const log_cell_data = [
   {
     number:12,
     date: pick({
-      fr: 'TO DO',
-      en: 'TO DO',
+      fr: '8 Août 2019',
+      en: 'August 8, 2019',
     }),
     content: pick({
       fr:
         <span>
-          TO DO       
+          Grande nouveauté de cette version pour le monde de l'archivage : Archifiltre vous permet désormais 
+          d'éditer un <b>bordereau CSV de méta-données à destination du logiciel ReSIP</b>, du Programme Vitam ! 
+          Ceci devient la méthode officielle pour éditer des paquets de versement incluant toutes les 
+          métadonnées d'origine des dossiers et fichiers, ainsi que les tags et descriptions que vous avez
+          renseignés dans Archifiltre.<br /><br />
+          Pendant le chargement d'un arborescence, vous verrez s'afficher des <b>astuces</b>, histoire de patienter 
+          et d'en apprendre plus sur le fonctionnement d'Archifiltre.<br /><br />
+          Dernière modification, et pas des moindres : Archifiltre est désormais compatible avec les 
+          ordinateurs sous <b>Windows 32 bits</b> !
         </span>
       ,
       en:
         <span>
-          TO DO
+          The big feature in this version, for archivists: Archifiltre now outputs a <b>CSV file for re-use in 
+          Programme Vitam's ReSIP</b>! This is now the official way of producing Submission Information Packages 
+          with all your files and folders' original metadata, along with the tags and descriptions you've 
+          entered in Archifiltre.<br /><br />
+          While loading a file tree, you will now see <b>tips</b> that will help make the wait nicer, and also tell 
+          your more about what you can do with Archifiltre.<br /><br />
+          Last, but not least: Archifiltre now works on <b>32 bit Windows</b> computers!
         </span>
       ,
     }),
