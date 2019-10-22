@@ -1,4 +1,3 @@
-
 import React from 'react'
 
 import make from 'css/make'
@@ -6,11 +5,10 @@ import pick from 'languages'
 
 import { t_a_center, p, h4 } from 'css/cascade'
 
-
 const title1_text = pick({
   fr:<span>Besoin d'y voir clair dans une arborescence ?</span>,
   en:<span>Looking for clarity in a file tree?</span>
-})
+});
 
 const para11_text = pick({
   fr:
@@ -25,7 +23,7 @@ const para11_text = pick({
       How do you tell what's in "misc"?
       How do quickly figure out which files take up the most space?
     </span>
-})
+});
 
 const para12_text = pick({
   fr:
@@ -38,13 +36,13 @@ const para12_text = pick({
       With <strong>archifiltre</strong>, get the full picture.
       Make out an entire file tree, all in one glance.
     </span>
-})
+});
 
 
 const title2_text = pick({
   fr:<span>Le tri, mais zen.</span>,
   en:<span>Sorting, but zen.</span>
-})
+});
 
 
 const para2_text = pick({
@@ -66,26 +64,26 @@ const para2_text = pick({
       to do the exact same thing, with a file tree.
       Take it, examine it, and sort it.
     </span>
-})
+});
 
 
 const padding = make({
   padding: '0em 1em',
-})
+});
 
-const cell_style = padding.style()
+const cell_style = padding.style();
 
-const image_cell_style = padding.add(t_a_center).style()
+const image_cell_style = padding.add(t_a_center).style();
 
 const root_style = {
   padding: '2em 0em',
-}
+};
 
-const title_style = h4.style()
+const title_style = h4.style();
 
-const para_style = p.style()
+const para_style = p.style();
 
-export default function Features(props) {
+export default function Features() {
   return (
     <div style={root_style}>
       <div className='grid-x grid-padding-y align-middle'>

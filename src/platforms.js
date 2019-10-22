@@ -1,6 +1,3 @@
-
-
-
 export default [
   {
     name:'Windows 64 bit',
@@ -11,4 +8,3 @@ export default [
     url_end:'linux/archifiltre.tar.gz',
   },
 ]
-

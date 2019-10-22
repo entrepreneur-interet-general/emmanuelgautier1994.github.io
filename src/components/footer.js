@@ -1,29 +1,26 @@
-
 import React from 'react'
-import CTA from 'components/cta'
 
 import make from 'css/make'
 import { white } from 'css/cascade'
 
 const grid_style = {
   height: '3em'
-}
-
+};
 
 const logo_style = white.add({
   letterSpacing: '0.25em',
   fontVariantLigatures: 'none',
   fontSize: '0.85em',
   fontWeight: '400'
-}).style()
+}).style();
 
 const link_style = make({
   color: '#9e9e9e',
   fontSize: '0.85em',
-}).style()
+}).style();
 
 
-export default function Footer(props) {
+export default function Footer() {
   return (
     <div className='grid-x'>
       <div className='cell auto'></div>

@@ -1,19 +1,16 @@
-
 import React from 'react'
 
 import pick from 'languages'
 
-
 export default class Bubble extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.onMouseEnter = this.onMouseEnter.bind(this)
-    this.onMouseLeave = this.onMouseLeave.bind(this)
-
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
 
     this.state = {
-      mouse_over:false,
+      mouse_over: false,
     }
   }
 
@@ -30,11 +27,10 @@ export default class Bubble extends React.Component {
   }
 
   render() {
-    const state = this.state
-    const mouse_over = state.mouse_over
+    const state = this.state;
+    const mouse_over = state.mouse_over;
 
-    const label = '?'
-
+    const label = '?';
 
     const sub_label = pick({
       en:(
@@ -66,11 +62,11 @@ export default class Bubble extends React.Component {
           </div>
         </div>
       ),
-    })
+    });
 
-    const width = 18
-    const color = '#bfd3da'
-    const border_color = '#989898'
+    const width = 18;
+    const color = '#bfd3da';
+    const border_color = '#989898';
 
     const style = {
       position:'relative',
@@ -78,7 +74,7 @@ export default class Bubble extends React.Component {
       width:'1.4em',
       borderRadius:'1em',
       border:`0.1em solid ${border_color}`,
-    }
+    };
 
     const sub_style = {
       display:'none',
@@ -88,7 +84,7 @@ export default class Bubble extends React.Component {
       width:`${width}em`,
       paddingTop:'0.2em',
       zIndex: 3,
-    }
+    };
 
     const sub_sub_style = {
       backgroundColor:color,
@@ -97,7 +93,7 @@ export default class Bubble extends React.Component {
       boxShadow:'-0.2em 0.2em 0.1em #525252',
       borderRadius:'0.2em',
       border:`0.1em solid ${border_color}`,
-    }
+    };
 
     const sub_arrow_style = {
       width: 0,
@@ -105,12 +101,11 @@ export default class Bubble extends React.Component {
       borderLeft: '1em solid transparent',
       borderRight: '1em solid transparent',
       borderBottom: `0.5em solid ${border_color}`,
-    }
+    };
 
     if (mouse_over) {
       delete sub_style.display
     }
-
 
     return (
       <div style={style}>

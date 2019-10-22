@@ -1,42 +1,39 @@
-
 import React from 'react'
 
 import make from 'css/make'
 import pick from 'languages'
 
-import { t_a_center, p, h4 } from 'css/cascade'
+import { t_a_center } from 'css/cascade'
 
 import Slider from "react-slick"
 import LogCell from "components/log-cell"
 
 import versions from 'versions'
 
-
-
 const title_style_base = {
   fontFamily: "'Quicksand', sans-serif",
   margin: '0'
-}
+};
 
-const title_style = t_a_center.add(make(title_style_base)).style()
+const title_style = t_a_center.add(make(title_style_base)).style();
 const title_text = pick({
   fr: "Quoi de neuf ?",
   en: "What's new?"
-})
+});
 
 const padding = make({
   padding: '0em 2.5em',
-})
+});
 
-const cell_style = padding.style()
+const cell_style = padding.style();
 
 const root_style = {
   padding: '3em 2em 5em 2em',
   fontFamily: "'Quicksand', sans-serif"
-}
+};
 
 const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <div
       className={className}
@@ -44,10 +41,10 @@ const SamplePrevArrow = (props) => {
       onClick={onClick}
     />
   );
-}
+};
 
 const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <div
       className={className}
@@ -55,23 +52,51 @@ const SampleNextArrow = (props) => {
       onClick={onClick}
     />
   );
-}
-
-
+};
 
 const settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  // centerMode: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
 };
 
-
 const log_cell_data = [
+  {
+    number: 13,
+    date: pick({
+      fr: '22 Octobre 2019',
+      en: 'October 22, 2019',
+    }),
+      content: pick({
+      fr:
+        <span>
+          La nouveauté principale de cette version est la génération d'un <b>rapport d'audit</b> !
+          Après avoir importé votre arborescence de fichiers, vous pourrez exporter un rapport d'audit
+          qui vous donnera des conseils et remarques sur l'oganisation de vos fichiers.<br /><br />
+          Le chargement de l'arborescence a lui aussi évolué ! Désormais, <b>l'écran de chargement contient
+          des barres de progression</b> qui détaillent chaque étape de l'import.<br /><br />
+          Enfin, Archifiltre calcule désormais des <b>hashs pour chaque fichier et dossier</b>. Deux hashs
+          identiques indiquent que les deux fichiers ou dossiers contiennent les mêmes données, même
+          s'ils ont des noms différents !
+        </span>
+        ,
+        en:
+        <span>
+          The main feature in this version is the <b>audit report</b> generation! After you imported your
+          file tree, you'll be able to export an audit report containing advice and remarks on the way
+          your files and folders are organised.<br/><br/>
+          The file tree loading screen also evolved! From now on, <b>the loading screen has progress bars</b>
+          that give details about each step of the import.<br/><br/>
+          Finally, Archifiltre now computes <b>hashes for every files and folders</b>. Two identical hashes means
+          that two files or folders contain the same data, no matter what name they have!
+        </span>
+      ,
+    }),
+  },
   {
     number:12,
     date: pick({
@@ -463,11 +488,9 @@ const log_cell_data = [
       ,
     }),
   },
-]
+];
 
-
-
-export default function ChangeLog(props) {
+export default function ChangeLog() {
   return (
     <div style={root_style} id="changelog">
       <div className='grid-x grid-padding-y align-middle'>

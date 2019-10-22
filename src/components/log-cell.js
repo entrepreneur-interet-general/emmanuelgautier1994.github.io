@@ -13,12 +13,12 @@ const cell_style = {
   fontSize: '0.8em',
   minHeight: '10em',
   fontFamily: "'Quicksand', sans-serif"
-}
+};
 
 const current_version_text = pick({
   fr: "Version actuelle",
   en: "Current version"
-})
+});
 
 const current_version = (<span style={{color: '#08c37d'}}>• {current_version_text}</span>);
 
