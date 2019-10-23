@@ -1,4 +1,3 @@
-
 import React from 'react'
 import CTA from 'components/cta'
 
@@ -9,27 +8,27 @@ import { t_a_center, h3, white } from 'css/cascade'
 const title_text = pick({
   fr:<span>Changez de point de vue.</span>,
   en:<span>Change your perspective.</span>
-})
+});
 
 const grid_style = {
   padding: '2.5em'
-}
+};
 
 const title_style = h3
   .add(t_a_center)
   .add(white)
-  .style()
+  .style();
 
 const cta_style = t_a_center.add({
   padding: '0.5em'
-}).style()
+}).style();
 
 
 export default function Recall(props) {
-  const version_index = props.version_index
-  const setVersionIndex = props.setVersionIndex
-  const platform_index = props.platform_index
-  const setPlatformIndex = props.setPlatformIndex
+  const version_index = props.version_index;
+  const setVersionIndex = props.setVersionIndex;
+  const platform_index = props.platform_index;
+  const setPlatformIndex = props.setPlatformIndex;
 
   return (
     <div className='grid-x' style={grid_style}>

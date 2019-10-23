@@ -13,9 +13,6 @@ COPY . .
 
 CMD ["./startupDev.bash"]
 
-
-
-
 FROM dev as prod
 
 WORKDIR /usr/src/app

@@ -1,6 +1,4 @@
-
 import React from 'react'
-
 
 export default class Select extends React.Component {
   constructor(props) {
@@ -8,21 +6,21 @@ export default class Select extends React.Component {
   }
 
   render() {
-    const props = this.props
+    const props = this.props;
 
-    let disabled = false
+    let disabled = false;
     if (props.disabled) {
       disabled = props.disabled
     }
 
-    const index = props.index
-    const array = props.array
-    const onChange = props.onChange
-    const style = props.style
+    const index = props.index;
+    const array = props.array;
+    const onChange = props.onChange;
+    const style = props.style;
 
     const components = array.map((val,i)=>
       <option key={i} value={i}>{val}</option>
-    )
+    );
 
     return (
       <select

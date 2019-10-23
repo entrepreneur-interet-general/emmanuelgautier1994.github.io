@@ -1,4 +1,3 @@
-
 import React from 'react'
 
 import Select from 'components/select'
@@ -8,9 +7,7 @@ import pick from 'languages'
 import versions from 'versions'
 import platforms from 'platforms'
 
-
 import Bubble from 'components/bubble'
-
 
 const button_style = {
   background: 'rgb(33, 150, 243)',
@@ -22,7 +19,7 @@ const button_style = {
   fontWeight: '500',
   fontSize: '1em',
   margin: '0',
-}
+};
 
 const select_style = {
   width:'auto',
@@ -30,54 +27,50 @@ const select_style = {
   margin:'0',
   marginRight: '0.5em',
   height:'auto',
-}
+};
 
-const ctaText = (version_index) => {
-  const number = versions[version_index].number
-
+const ctaText = () => {
   return pick({
     fr:<span>DÉCOUVREZ L'APPLICATION</span>,
     en:<span>DISCOVER THE APP</span>
   })
-}
+};
 
 export default function CTA(props) {
-  const version_index = props.version_index
-  const setVersionIndex = props.setVersionIndex
+  const version_index = props.version_index;
+  const setVersionIndex = props.setVersionIndex;
   const onChangeVersion = (event) => {
-    const version_index = event.target.value
+    const version_index = event.target.value;
     setVersionIndex(version_index)
-  }
+  };
 
-  const versions_text = versions.map(a=>`v${a.number} : ${a.name}`)
+  const versions_text = versions.map(a=>`v${a.number} : ${a.name}`);
 
-  const version = versions[version_index]
-  const number = version.number
-  const name = version.name
-  let url = version.url
+  const version = versions[version_index];
+  const number = version.number;
+  let url = version.url;
 
-  const label = ctaText(version_index)
+  const label = ctaText(version_index);
 
-
-
-  let platform_index = props.platform_index
-  const setPlatformIndex = props.setPlatformIndex
+  let platform_index = props.platform_index;
+  const setPlatformIndex = props.setPlatformIndex;
   const onChangePlatform = (event) => {
-    const platform_index = event.target.value
+    const platform_index = event.target.value;
     setPlatformIndex(platform_index)
-  }
+  };
 
-  let platforms_text = platforms.map(a=>a.name)
-  let platform_disabled = false
-  const url_end = platforms[platform_index].url_end
+  let platforms_text = platforms.map(a=>a.name);
+  let platform_disabled = false;
+  let url_end = platforms[platform_index].url_end;
 
   if (number < 9) {
     // app is online
-    platform_index = 0
-    platforms_text = ['Online'].concat(platforms_text)
+    platform_index = 0;
+    platforms_text = ['Online'].concat(platforms_text);
     platform_disabled = true
   } else {
     // app is local
+    if (number === 13) url_end = url_end.split('/')[1];
     url = url+url_end
   }
 
