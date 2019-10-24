@@ -1,7 +1,7 @@
 export default [
   {
     number: 13,
-    name:'Magic Mouse',
+    name:'Magic Moose',
     url:'https://github.com/SocialGouv/archifiltre/releases/download/v13/',
   },
   {
